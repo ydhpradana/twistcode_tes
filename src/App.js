@@ -498,6 +498,7 @@ function App() {
   const handleChange = (i) => {
     row = [];
     setSelectColor(i);
+    let filter = chooseColor;
     all.row.map((item, index) => {
       let temp = [];
       let key1 = 'id';
@@ -523,7 +524,45 @@ function App() {
         cek_filter.push(item);
       }
     });
-    setAllFilter(cek_filter);
+    let cek_all = [];
+    cek_filter.map((item,index)=>{
+      if(filter != null){
+        if(filter == "Lightest"){
+          cek_all.push({
+            id: item.id,
+            Nama: item.Nama,
+            Lightest: item.Lightest
+          })
+        }else if(filter == "Lighter"){
+          cek_all.push({
+            id: item.id,
+            Nama: item.Nama,
+            Lighter: item.Lighter
+          })
+        }else if(filter == "Normal"){
+          cek_all.push({
+            id: item.id,
+            Nama: item.Nama,
+            Normal: item.Normal
+          })
+        }else if(filter == "Darker"){
+          cek_all.push({
+            id: item.id,
+            Nama: item.Nama,
+            Darker: item.Darker
+          })
+        }else if(filter == "Darkest"){
+          cek_all.push({
+            id: item.id,
+            Nama: item.Nama,
+            Darkest: item.Darkest
+          })
+        }
+      }else{
+        cek_all.push(item);
+      }
+    });
+    setAllFilter(cek_all);
   };
   const onChange = e => {
     row = [];
