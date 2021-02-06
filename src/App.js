@@ -474,7 +474,6 @@ function App() {
       index: index,
     };
   });
-  //console.log(all.data.filter(function(r){return r.column == "Nama"; })[0].data[0].value);
   let row = [];
   all.row.map((item, index) => {
     let temp = [];
@@ -488,7 +487,6 @@ function App() {
       temp[column[key].dataIndex] = all.data.filter(function(r) {
         return r.column == column[key].dataIndex;
       })[0].data[index].value;
-      //console.log(a);
     }
     row.push(Object.assign({}, temp));
   });
@@ -499,7 +497,6 @@ function App() {
 
   const handleChange = (i) => {
     row = [];
-    //console.log(event, i);
     setSelectColor(i);
     all.row.map((item, index) => {
       let temp = [];
@@ -513,7 +510,6 @@ function App() {
         temp[column[key].dataIndex] = all.data.filter(function(r) {
           return r.column == column[key].dataIndex;
         })[0].data[index].value;
-        //console.log(a);
       }
       row.push(Object.assign({}, temp));
     });
@@ -547,7 +543,6 @@ function App() {
         temp[column[key].dataIndex] = all.data.filter(function(r) {
           return r.column == column[key].dataIndex;
         })[0].data[index].value;
-        //console.log(a);
       }
       row.push(Object.assign({}, temp));
     });
@@ -599,13 +594,9 @@ function App() {
         cek_all.push(item);
       }
     });
-    console.log(cek_filter);
-    console.log(cek_all);
-    console.log(filter);
-    console.log(cat);
     setAllFilter(cek_all);
   };
-  console.log(column);
+  
   return (
     <div>
       <body>
