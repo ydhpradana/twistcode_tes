@@ -1,0 +1,35 @@
+const actions = {
+  COUNTRY_PHONE_BEGIN: 'COUNTRY_PHONE_BEGIN',
+  COUNTRY_PHONE_SUCCESS: 'COUNTRY_PHONE_SUCCESS',
+  COUNTRY_PHONE_ERR: 'COUNTRY_PHONE_ERR',
+  POST_TINDASAN_BEGIN: 'POST_TINDASAN_BEGIN',
+  POST_TINDASAN_SUCCESS: 'POST_TINDASAN_SUCCESS',
+  POST_TINDASAN_ERR: 'POST_TINDASAN_ERR',
+  DELETE_TINDASAN_BEGIN: 'DELETE_TINDASAN_BEGIN',
+  DELETE_TINDASAN_SUCCESS: 'DELETE_TINDASAN_SUCCESS',
+  DELETE_TINDASAN_ERR: 'DELETE_TINDASAN_ERR',
+  ORGEH_SEARCH_BEGIN: 'ORGEH_SEARCH_BEGIN',
+  ORGEH_SEARCH_SUCCESS: 'ORGEH_SEARCH_SUCCESS',
+  ORGEH_SEARCH_ERR: 'ORGEH_SEARCH_ERR',
+
+  countryPhoneBegin: () => {
+    return {
+      type: actions.COUNTRY_PHONE_BEGIN,
+    };
+  },
+
+  countryPhoneSuccess: data => {
+    return {
+      type: actions.COUNTRY_PHONE_SUCCESS,
+      data,
+    };
+  },
+  countryPhoneErr: err => {
+    return {
+      type: actions.COUNTRY_PHONE_ERR,
+      err,
+    };
+  },
+};
+
+export default actions;
